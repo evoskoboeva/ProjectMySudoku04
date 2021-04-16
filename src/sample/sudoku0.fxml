@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?scenebuilder-stylesheet fullStructureCSS.css?>
-
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+
 <GridPane alignment="center" hgap="10" stylesheets="@../sample/fullStructureCSS.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <rowConstraints>
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
@@ -25,10 +25,9 @@
       <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
    </columnConstraints>
    <children>
-      <Button fx:id="btnPlay" minWidth="-Infinity" mnemonicParsing="false" onAction="#Play" text="PLAYYY!!!" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="10" />
+      <Button fx:id="btnPlay" minWidth="-Infinity" mnemonicParsing="false" onAction="#Play" text="PLAYYY!!!" GridPane.columnIndex="3" GridPane.rowIndex="10" />
       <GridPane prefHeight="282.0" prefWidth="332.0" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.rowSpan="9">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -700,6 +699,7 @@
          </children>
       </GridPane>
       <Accordion />
-      <Button fx:id="btnGeneration" mnemonicParsing="false" onAction="#Generation" text="Generation" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <Button fx:id="btnGeneration" mnemonicParsing="false" onAction="#GenerationEasy" text="easy level" GridPane.rowIndex="10" />
+      <Button fx:id="btnGenerationHard" mnemonicParsing="false" onAction="#GenerationHard" text="hard level" GridPane.columnIndex="1" GridPane.rowIndex="10" />
    </children>
 </GridPane>

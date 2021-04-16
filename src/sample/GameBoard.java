@@ -58,7 +58,7 @@ public class GameBoard {
 
     // returns the solution array
     public int[][] getSolution() {
-        return solution;
+              return solution;
     }
 
     // returns the initial filled-in numbers array

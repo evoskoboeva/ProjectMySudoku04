@@ -16,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
@@ -220,7 +221,7 @@ public class Controller<toString> {
 
 
 
-    public void Generation(ActionEvent actionEvent) {
+    public void GenerationHard(ActionEvent actionEvent) {
         int[][] matrix = new int[size][size];
         int[] temp = new int[size];
         int random;
@@ -256,7 +257,7 @@ public class Controller<toString> {
             }
         }
         int count = (int) (Math.random() * 100 + 10);
-        System.out.println(count);
+        //System.out.println(count);
 
         for (int i = 0; i < count; i++) {
             int random1 = (int) (Math.random() * 9 + 1);
@@ -286,12 +287,97 @@ public class Controller<toString> {
             if (matrix[randomRow][randomCol] != 0) {
                 tempCell = matrix[randomRow][randomCol];
             } else continue;
-            System.out.println(randomRow);
+           /* System.out.println(randomRow);
             System.out.println(randomCol);
+           */
             matrix[randomRow][randomCol] = 0;
             count++;
         }
         while (count < 50);
+        Output(matrix);
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix.length; col++) {
+                matrixInitial[row][col]=matrix[row][col];
+
+            }
+
+        }
+
+
+    }
+    public void GenerationEasy(ActionEvent actionEvent) {
+        int[][] matrix = new int[size][size];
+        int[] temp = new int[size];
+        int random;
+        int level = 0;
+        for (int i = 0; i < 3; i++) {
+            int step = 0;
+            int count = 0;
+            for (int row = level; count < 3; row++) {
+                for (int col = 0; col < matrix.length; col++) {
+                    matrix[row][col] = ((col + step + i) % size + 1);
+                }
+                step = step + 3;
+                level++;
+                count++;
+            }
+        }
+
+
+        for (int row = 0; row < matrix.length; row += 3) {
+            random = (int) (Math.random() * (2) + 1);
+            for (int col = 0; col < matrix.length; col++) {
+                temp[col] = matrix[row][col];
+                matrix[row][col] = matrix[row + random][col];
+                matrix[row + random][col] = temp[col];
+            }
+        }
+        for (int col = 0; col < matrix.length; col += 3) {
+            random = (int) (Math.random() * (2) + 1);
+            for (int row = 0; row < matrix.length; row++) {
+                temp[row] = matrix[row][col];
+                matrix[row][col] = matrix[row][col + random];
+                matrix[row][col + random] = temp[row];
+            }
+        }
+        int count = (int) (Math.random() * 100 + 10);
+       // System.out.println(count);
+
+        for (int i = 0; i < count; i++) {
+            int random1 = (int) (Math.random() * 9 + 1);
+            int random2 = (int) (Math.random() * 9 + 1);
+            for (int col = 0; col < matrix.length; col++) {
+                for (int row = 0; row < matrix.length; row++) {
+                    if (matrix[row][col] == random1) {
+                        matrix[row][col] = random2;
+                    } else if (matrix[row][col] == random2) {
+                        matrix[row][col] = random1;
+                    }
+                }
+            }
+        }
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix.length; col++) {
+                matrixSolution[row][col]=matrix[row][col];
+                System.out.print(matrixSolution[row][col]);
+            }
+            System.out.println();
+        }
+        count = 0;
+        do {
+            int tempCell;
+            int randomRow = (int) (Math.random() * (size));
+            int randomCol = (int) (Math.random() * (size));
+            if (matrix[randomRow][randomCol] != 0) {
+                tempCell = matrix[randomRow][randomCol];
+            } else continue;
+            /*System.out.println(randomRow);
+            System.out.println(randomCol);
+            */
+            matrix[randomRow][randomCol] = 0;
+            count++;
+        }
+        while (count < 35);
         Output(matrix);
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix.length; col++) {
@@ -398,11 +484,13 @@ public class Controller<toString> {
 
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("sudoku.css");
+        scene.getStylesheets().add("/sample/sudoku.css");
         Stage primaryStage = new Stage();
         initGame();
 
-        primaryStage.setTitle("Sudoku");
+        primaryStage.setTitle("Sudoku ver.03");
+        primaryStage.getIcons().add(new Image("sample/ikon.jpg"));
+
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -472,8 +560,9 @@ public class Controller<toString> {
                 int positionY = row * 50 + 30;
                 int positionX = col * 50 + 20;
 
-                context.setFill(Color.PURPLE);
-                context.setFont(new Font(20));
+                context.setFill(Color.GREEN);
+                context.setFont(new Font(22));
+
 
                 if(player[row][col]!=0) {
                     context.fillText(player[row][col] + "", positionX, positionY);
@@ -487,7 +576,7 @@ public class Controller<toString> {
             context.clearRect(0, 0, 450, 450);
             context.setFill(Color.GREEN);
             context.setFont(new Font(36));
-            context.fillText("SUCCESS!", 150, 250);
+            context.fillText("YES!", 150, 250);
         }
     }
 

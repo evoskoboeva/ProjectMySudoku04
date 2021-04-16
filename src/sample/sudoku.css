@@ -3,7 +3,17 @@
 }
 
 .button {
-    -fx-background-color: #bdc3c7;
+-fx-padding: 2 5 2 5;
+    -fx-border-color: #12e112;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+
+    -fx-background-color: black;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 12pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }
 
 .button:hover {

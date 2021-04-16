@@ -90,7 +90,8 @@
 
 .text-field {
     -fx-font-size: 12pt;
-    -fx-border-radius: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
     -fx-background-color: white;
     -fx-text-fill: black;
     -fx-border-color: black;
