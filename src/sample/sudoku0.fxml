@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-stylesheet fullStructureCSS.css?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane alignment="center" hgap="10" stylesheets="@../sample/fullStructureCSS.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <children>
+      <Button fx:id="btnPlay" minWidth="-Infinity" mnemonicParsing="false" onAction="#Play" text="PLAYYY!!!" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="10" />
+      <GridPane prefHeight="282.0" prefWidth="332.0" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.rowSpan="9">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txt_04" layoutX="10.0" layoutY="6.0" GridPane.columnIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <TextField fx:id="txt_05" layoutX="10.0" layoutY="6.0" GridPane.columnIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <TextField fx:id="txt_06" layoutX="10.0" layoutY="6.0" GridPane.columnIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <TextField fx:id="txt_07" layoutX="10.0" layoutY="6.0" GridPane.columnIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <TextField fx:id="txt_08" layoutX="10.0" layoutY="6.0" GridPane.columnIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <TextField fx:id="txt_01" layoutX="10.0" layoutY="6.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <TextField fx:id="txt_02" layoutX="10.0" layoutY="6.0" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <TextField fx:id="txt_03" layoutX="10.0" layoutY="6.0" GridPane.columnIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding></TextField>
+            <TextField fx:id="txt_18" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="10" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_17" layoutX="150.0" layoutY="9.0" GridPane.columnIndex="9" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_16" layoutX="186.0" layoutY="9.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_15" layoutX="222.0" layoutY="9.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_14" layoutX="258.0" layoutY="9.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_13" layoutX="294.0" layoutY="9.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_12" layoutX="45.0" layoutY="9.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_11" layoutX="80.0" layoutY="9.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_22" layoutX="115.0" layoutY="9.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_20" layoutX="294.0" layoutY="39.0" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_30" layoutX="258.0" layoutY="39.0" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_28" layoutX="222.0" layoutY="39.0" GridPane.columnIndex="10" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_27" layoutX="186.0" layoutY="39.0" GridPane.columnIndex="9" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_26" layoutX="150.0" layoutY="39.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_25" layoutX="115.0" layoutY="39.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_24" layoutX="80.0" layoutY="39.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_23" layoutX="45.0" layoutY="39.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_21" layoutX="10.0" layoutY="39.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_10" layoutX="10.0" layoutY="69.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_38" layoutX="10.0" layoutY="99.0" GridPane.columnIndex="10" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_37" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="9" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_36" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="8" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_35" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_34" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_33" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_32" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_31" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_80" layoutX="10.0" layoutY="9.0" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_70" layoutX="10.0" layoutY="9.0" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_60" layoutX="10.0" layoutY="9.0" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_50" layoutX="10.0" layoutY="9.0" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_40" layoutX="10.0" layoutY="9.0" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_55" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="6" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_54" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_53" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_52" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_51" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_48" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="10" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_47" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="9" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_46" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="8" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_45" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="6" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_44" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_43" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_42" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_41" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_63" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="4" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_62" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_81" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_71" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_61" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_58" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="10" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_57" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="9" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_56" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="8" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_76" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="8" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_75" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="6" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_74" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="5" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_73" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="4" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_72" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_68" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="10" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_67" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="9" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_66" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="8" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_65" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="6" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_64" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="5" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_83" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="4" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_82" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="2" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_78" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="10" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_77" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="9" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_00" layoutX="10.0" layoutY="9.0">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_86" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="8" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_85" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="6" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_84" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="5" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_88" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="10" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txt_87" layoutX="10.0" layoutY="9.0" GridPane.columnIndex="9" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+         </children>
+      </GridPane>
+      <Accordion />
+      <Button fx:id="btnGeneration" mnemonicParsing="false" onAction="#Generation" text="Generation" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+   </children>
+</GridPane>
