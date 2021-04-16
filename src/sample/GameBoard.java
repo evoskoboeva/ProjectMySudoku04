@@ -3,14 +3,29 @@ package sample;
 public class GameBoard {
 
     /* Array that will contain the complete solution to the board */
-    private int[][] solution;
+    public int[][] solution = new int[Controller.size][Controller.size];
     /* Array that will contain ONLY the numbers initially drawn on the board and that the player can't change */
-    private int[][] initial;
+    public int[][] initial = new int[Controller.size][Controller.size];
     /* Array that will contain player's numbers */
-    private int[][] player;
+    private int[][] player = new int[Controller.size][Controller.size];
 
     public GameBoard() {
-        solution = new int[][]
+        for (int row = 0; row < solution.length; row++) {
+            for (int col = 0; col < solution.length; col++) {
+                solution[row][col]=Controller.matrixSolution[row][col];
+
+            }
+
+        }
+        for (int row = 0; row < initial.length; row++) {
+            for (int col = 0; col < initial.length; col++) {
+                initial[row][col]=Controller.matrixInitial[row][col];
+
+            }
+
+        }
+
+        /*solution = new int[][]
                 {
                         {5,3,8,4,6,1,7,9,2},
                         {6,9,7,3,2,5,8,1,4},
@@ -22,9 +37,9 @@ public class GameBoard {
                         {4,2,6,8,9,7,3,5,1},
                         {1,7,5,6,3,4,2,8,9}
                 };
-
+*/
         // 0's will be rendered as empty space and will be editable by player
-        initial = new int[][]
+        /*initial = new int[][]
                 {
                         {0,0,0,4,0,0,0,9,0},
                         {6,0,7,0,0,0,8,0,4},
@@ -35,7 +50,7 @@ public class GameBoard {
                         {3,0,0,5,0,2,0,7,0},
                         {4,0,6,0,0,0,3,0,1},
                         {0,7,0,0,0,4,0,0,0}
-                };
+                };*/
 
         // player's array is initialized as a 9x9 full of zeroes
         player = new int[9][9];
