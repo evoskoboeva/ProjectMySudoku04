@@ -1,5 +1,8 @@
 package sample;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -20,6 +24,7 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 
 import java.io.IOException;
@@ -214,6 +219,7 @@ public class Controller<toString> {
     private int selectedColumn;
 
     public static int size = 9;
+    public int levelGame;
     public int[][] matrix = new int[size][size];
     public static int[][] matrixSolution = new int[size][size];
     public static int[][] matrixInitial = new int[size][size];
@@ -222,90 +228,15 @@ public class Controller<toString> {
 
 
     public void GenerationHard(ActionEvent actionEvent) {
-        int[][] matrix = new int[size][size];
-        int[] temp = new int[size];
-        int random;
-        int level = 0;
-        for (int i = 0; i < 3; i++) {
-            int step = 0;
-            int count = 0;
-            for (int row = level; count < 3; row++) {
-                for (int col = 0; col < matrix.length; col++) {
-                    matrix[row][col] = ((col + step + i) % size + 1);
-                }
-                step = step + 3;
-                level++;
-                count++;
-            }
-        }
-
-
-        for (int row = 0; row < matrix.length; row += 3) {
-            random = (int) (Math.random() * (2) + 1);
-            for (int col = 0; col < matrix.length; col++) {
-                temp[col] = matrix[row][col];
-                matrix[row][col] = matrix[row + random][col];
-                matrix[row + random][col] = temp[col];
-            }
-        }
-        for (int col = 0; col < matrix.length; col += 3) {
-            random = (int) (Math.random() * (2) + 1);
-            for (int row = 0; row < matrix.length; row++) {
-                temp[row] = matrix[row][col];
-                matrix[row][col] = matrix[row][col + random];
-                matrix[row][col + random] = temp[row];
-            }
-        }
-        int count = (int) (Math.random() * 100 + 10);
-        //System.out.println(count);
-
-        for (int i = 0; i < count; i++) {
-            int random1 = (int) (Math.random() * 9 + 1);
-            int random2 = (int) (Math.random() * 9 + 1);
-            for (int col = 0; col < matrix.length; col++) {
-                for (int row = 0; row < matrix.length; row++) {
-                    if (matrix[row][col] == random1) {
-                        matrix[row][col] = random2;
-                    } else if (matrix[row][col] == random2) {
-                        matrix[row][col] = random1;
-                    }
-                }
-            }
-        }
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix.length; col++) {
-                matrixSolution[row][col]=matrix[row][col];
-
-            }
-
-        }
-        count = 0;
-        do {
-            int tempCell;
-            int randomRow = (int) (Math.random() * (size));
-            int randomCol = (int) (Math.random() * (size));
-            if (matrix[randomRow][randomCol] != 0) {
-                tempCell = matrix[randomRow][randomCol];
-            } else continue;
-           /* System.out.println(randomRow);
-            System.out.println(randomCol);
-           */
-            matrix[randomRow][randomCol] = 0;
-            count++;
-        }
-        while (count < 50);
-        Output(matrix);
-        for (int row = 0; row < matrix.length; row++) {
-            for (int col = 0; col < matrix.length; col++) {
-                matrixInitial[row][col]=matrix[row][col];
-
-            }
-
-        }
-
+        levelGame = 50;
+        Generation(actionEvent);
 
     }
     public void GenerationEasy(ActionEvent actionEvent) {
+        levelGame = 35;
+        Generation(actionEvent);
+    }
+    public void Generation(ActionEvent actionEvent) {
         int[][] matrix = new int[size][size];
         int[] temp = new int[size];
         int random;
@@ -341,7 +272,7 @@ public class Controller<toString> {
             }
         }
         int count = (int) (Math.random() * 100 + 10);
-       // System.out.println(count);
+        // System.out.println(count);
 
         for (int i = 0; i < count; i++) {
             int random1 = (int) (Math.random() * 9 + 1);
@@ -377,7 +308,7 @@ public class Controller<toString> {
             matrix[randomRow][randomCol] = 0;
             count++;
         }
-        while (count < 35);
+        while (count < levelGame);
         Output(matrix);
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix.length; col++) {
@@ -494,6 +425,7 @@ public class Controller<toString> {
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+
     }
     private void initGame(){
         gameBoard = new GameBoard();
@@ -529,9 +461,11 @@ public class Controller<toString> {
         initBoard(context);
         setPlayerNumbers(context);
         setFinished(context);
+
     }
 
     private void initBoard(GraphicsContext context){
+
         int[][] initial = gameBoard.getInitial();
 
         // for loop is the same as before
@@ -563,6 +497,9 @@ public class Controller<toString> {
                 context.setFill(Color.GREEN);
                 context.setFont(new Font(22));
 
+                if(player[row][col]!=matrixSolution[row][col]) {
+                    context.setFill(Color.RED);
+                }
 
                 if(player[row][col]!=0) {
                     context.fillText(player[row][col] + "", positionX, positionY);
@@ -573,10 +510,23 @@ public class Controller<toString> {
 
     private void setFinished(GraphicsContext context){
         if(gameBoard.checkForSuccess()) {
+
             context.clearRect(0, 0, 450, 450);
-            context.setFill(Color.GREEN);
+            /*for(int row = 0; row<9; row++) {
+                for(int col = 0; col<9; col++) {
+
+                    int positionY = row * 50 + 2;
+                    int positionX = col * 50 + 2;
+
+                    int width = 46;
+                    context.setFill(Color.GREEN);
+
+                    context.fillRoundRect(positionX, positionY, width, width, 8, 8);
+                }
+            }*/
+            context.setFill(Color.WHITE);
             context.setFont(new Font(36));
-            context.fillText("YES!", 150, 250);
+            context.fillText("YOU WIN!", 150, 250);
         }
     }
 
@@ -649,7 +599,37 @@ public class Controller<toString> {
         gameBoard.modifyPlayer(9, selectedRow, selectedColumn);
         drawCanvas(canvas.getGraphicsContext2D());
     }
+    @FXML
+    public void buttonClearClicked() {
+        gameBoard.modifyPlayer(0, selectedRow, selectedColumn);
+        drawCanvas(canvas.getGraphicsContext2D());
+    }
+   /* private void buttonOpenSolutionClicked(){
+        int[][] player = gameBoard.getPlayer();
 
+        for(int row = 0; row<9; row++) {
+            for(int col = 0; col<9; col++) {
+                gameBoard.modifyPlayer(matrixSolution[row][col], row, col);
+                drawCanvas(canvas.getGraphicsContext2D());
+            }
+        }
+    }
+*/
+   public class My_Clock extends Label {
+       public long time;
+       My_Clock() {
+           time = 0;
+           bindToTime();
+       };
+       private void bindToTime() {
+           Timeline timeline = new Timeline(
+                   new KeyFrame(Duration.seconds(0), ae -> {
+                       time++;
+                       setText("" + time);
+                   }),new KeyFrame(Duration.millis(1000)));
+           timeline.setCycleCount(Animation.INDEFINITE);
+           timeline.play();
+       }}
 }
 
 

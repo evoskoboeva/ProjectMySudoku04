@@ -15,7 +15,7 @@ public class Main extends Application {
         root.styleProperty().setValue(" -fx-background-color: grey;  -fx-border-color: white; -fx-border-width: 1px;");
 
         primaryStage.setTitle("Sudoku ver.03");
-        primaryStage.setScene(new Scene(root));
+        primaryStage.setScene(new Scene(root,320,400));
         primaryStage.show();
         primaryStage.getIcons().add(new Image("sample/ikon.jpg"));
 
