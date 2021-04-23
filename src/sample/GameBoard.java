@@ -7,12 +7,14 @@ public class GameBoard {
     /* Array that will contain ONLY the numbers initially drawn on the board and that the player can't change */
     public int[][] initial = new int[Controller.size][Controller.size];
     /* Array that will contain player's numbers */
-    private int[][] player = new int[Controller.size][Controller.size];
+    public int[][] player = new int[Controller.size][Controller.size];
+    public String[][] zero = new String[Controller.size][Controller.size];
 
     public GameBoard() {
         for (int row = 0; row < solution.length; row++) {
             for (int col = 0; col < solution.length; col++) {
                 solution[row][col]=Controller.matrixSolution[row][col];
+                zero[row][col] = "win";
 
             }
 
@@ -65,6 +67,7 @@ public class GameBoard {
     public int[][] getInitial() {
         return initial;
     }
+    public String[][] getZero(){return zero;}
 
     // returns the player array
     public int[][] getPlayer() {

@@ -12,16 +12,10 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.application.Application;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -193,23 +187,31 @@ public class Controller<toString> {
     TextField txt_87;
     @FXML
     TextField txt_88;
-    private @FXML
+    @FXML
+    Line line4;
+    @FXML
+    Line line3;
+    @FXML
+    Line line1;
+    @FXML
+    Line line2;
+     @FXML
     Button button_one;
-    private @FXML
+    @FXML
     Button button_two;
-    private @FXML
+    @FXML
     Button button_three;
-    private @FXML
+    @FXML
     Button button_four;
-    private @FXML
+     @FXML
     Button button_five;
-    private @FXML
+     @FXML
     Button button_six;
-    private @FXML
+     @FXML
     Button button_seven;
-    private @FXML
+     @FXML
     Button button_eight;
-    private @FXML
+     @FXML
     Button button_nine;
     @FXML
     Button clear;
@@ -227,6 +229,7 @@ public class Controller<toString> {
     public int levelGame;
     public int[][] matrix = new int[size][size];
     public static int[][] matrixSolution = new int[size][size];
+    public static int[][] matrixAuto = new int[size][size];
     public static int[][] matrixInitial = new int[size][size];
 
 
@@ -238,7 +241,7 @@ public class Controller<toString> {
 
     }
     public void GenerationEasy(ActionEvent actionEvent) {
-        levelGame = 35;
+        levelGame = 1;
         Generation(actionEvent);
     }
     public void Generation(ActionEvent actionEvent) {
@@ -295,6 +298,7 @@ public class Controller<toString> {
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix.length; col++) {
                 matrixSolution[row][col]=matrix[row][col];
+                matrixAuto[row][col]=matrix[row][col];
                 System.out.print(matrixSolution[row][col]);
             }
             System.out.println();
@@ -311,11 +315,18 @@ public class Controller<toString> {
 
             //Здесь проверка что решение у судоку одно - пока не доделано
             matrix[randomRow][randomCol] = 0;
-            for (int row = 0; row < size; row++) {
-             if (matrix[row][randomCol]!=0){
-                 countSolution++;
-             }
+            Sudoku sudoku = new Sudoku(matrixAuto);
 
+
+            //System.out.println(sudoku.solve());
+            for (int row = 0; row < size; row++) {
+                for (int col = 0; col < size; col++) {
+
+
+                    if (matrixSolution[row][randomCol] != matrixAuto[row][col]) {
+                        break;
+                    }
+                }
             }
 
 
@@ -323,6 +334,7 @@ public class Controller<toString> {
         }
         while (count < levelGame);
         Output(matrix);
+        //Output(matrixAuto);  //test
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix.length; col++) {
                 matrixInitial[row][col]=matrix[row][col];
@@ -521,27 +533,40 @@ public class Controller<toString> {
         }
     }
 
-    private void setFinished(GraphicsContext context){
-        if(gameBoard.checkForSuccess()) {
-
+    private void setFinished(GraphicsContext context) {
+        if (gameBoard.checkForSuccess()) {
             context.clearRect(0, 0, 450, 450);
-            /*for(int row = 0; row<9; row++) {
-                for(int col = 0; col<9; col++) {
+            line4.setEndX(-100);
+            line3.setEndX(-100);
+            line1.setEndY(-71);
+            line2.setEndY(-70);
 
-                    int positionY = row * 50 + 2;
-                    int positionX = col * 50 + 2;
+            //initBoard(context);
+            String[][] zero = gameBoard.getZero();
 
-                    int width = 46;
-                    context.setFill(Color.GREEN);
+            // for loop is the same as before
+            for (int row = 0; row < 9; row++) {
+                for (int col = 0; col < 9; col++) {
 
-                    context.fillRoundRect(positionX, positionY, width, width, 8, 8);
+                    int positionY = row * 50 + 30;
+                    int positionX = col * 50 + 20;
+
+                    context.setFill(Color.WHITE);
+                    context.setFont(new Font(18));
+
+                    // if(matrixSolution[row][col]!=0) {
+                    context.fillText(zero[row][col], positionX, positionY);
+                    // }
                 }
-            }*/
-            context.setFill(Color.WHITE);
+            }
+            /*context.setFill(Color.WHITE);
             context.setFont(new Font(30));
-            context.fillText("YOU WIN!", 150, 250);
+            context.fillText("WIN!", 200, 250);
+            line4.setFill(Color.WHITE);
+*/
         }
     }
+
 
     @FXML
     private void canvasBoxSelected(){

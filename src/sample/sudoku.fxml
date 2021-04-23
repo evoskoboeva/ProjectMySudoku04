@@ -20,9 +20,9 @@
         <Button fx:id="next" layoutX="587.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#buttonNextClicked" prefHeight="50.0" prefWidth="50.0" stylesheets="@sudoku.css" text="Next" />
 
         <Canvas fx:id="canvas" height="450.0" layoutX="14.0" layoutY="15.0" width="450.0" />
-      <Line endX="350.0" layoutX="115.0" layoutY="166.0" startX="-100.0" stroke="#12e112" strokeWidth="3.0" />
-      <Line endX="350.0" layoutX="115.0" layoutY="315.0" startX="-100.0" stroke="#12e112" strokeWidth="3.0" />
-      <Line endY="370.0" layoutX="165.0" layoutY="91.0" startY="-70.0" stroke="#12e112" strokeWidth="3.0" />
-      <Line endY="370.0" layoutX="315.0" layoutY="91.0" startY="-70.0" stroke="#12e112" strokeWidth="3.0" />
+      <Line fx:id="line3" endX="350.0" layoutX="115.0" layoutY="166.0" startX="-100.0" stroke="#12e112" strokeWidth="3.0" />
+      <Line fx:id="line4" endX="350.0" layoutX="115.0" layoutY="315.0" startX="-100.0" stroke="#12e112" strokeWidth="3.0" />
+      <Line fx:id="line1" endY="370.0" layoutX="165.0" layoutY="91.0" startY="-70.0" stroke="#12e112" strokeWidth="3.0" />
+      <Line fx:id="line2" endY="370.0" layoutX="315.0" layoutY="91.0" startY="-70.0" stroke="#12e112" strokeWidth="3.0" />
     </children>
 </Pane>
