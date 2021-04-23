@@ -211,6 +211,11 @@ public class Controller<toString> {
     Button button_eight;
     private @FXML
     Button button_nine;
+    @FXML
+    Button clear;
+    @FXML
+    Button next;
+
     private @FXML
     Canvas canvas;
 
@@ -294,6 +299,7 @@ public class Controller<toString> {
             }
             System.out.println();
         }
+        int countSolution=0;
         count = 0;
         do {
             int tempCell;
@@ -302,10 +308,17 @@ public class Controller<toString> {
             if (matrix[randomRow][randomCol] != 0) {
                 tempCell = matrix[randomRow][randomCol];
             } else continue;
-            /*System.out.println(randomRow);
-            System.out.println(randomCol);
-            */
+
+            //Здесь проверка что решение у судоку одно - пока не доделано
             matrix[randomRow][randomCol] = 0;
+            for (int row = 0; row < size; row++) {
+             if (matrix[row][randomCol]!=0){
+                 countSolution++;
+             }
+
+            }
+
+
             count++;
         }
         while (count < levelGame);
@@ -525,7 +538,7 @@ public class Controller<toString> {
                 }
             }*/
             context.setFill(Color.WHITE);
-            context.setFont(new Font(36));
+            context.setFont(new Font(30));
             context.fillText("YOU WIN!", 150, 250);
         }
     }
@@ -603,6 +616,14 @@ public class Controller<toString> {
     public void buttonClearClicked() {
         gameBoard.modifyPlayer(0, selectedRow, selectedColumn);
         drawCanvas(canvas.getGraphicsContext2D());
+    }
+
+    @FXML
+    public void buttonNextClicked(){
+        gameBoard.modifyPlayer(matrixSolution[selectedRow][selectedColumn], selectedRow, selectedColumn);
+        drawCanvas(canvas.getGraphicsContext2D());
+
+
     }
    /* private void buttonOpenSolutionClicked(){
         int[][] player = gameBoard.getPlayer();

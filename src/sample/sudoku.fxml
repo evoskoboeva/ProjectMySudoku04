@@ -17,6 +17,8 @@
         <Button fx:id="button_eight" layoutX="587.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#buttonEightClicked" prefHeight="50.0" prefWidth="50.0" stylesheets="@sudoku.css" text="8" />
         <Button fx:id="button_nine" layoutX="646.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#buttonNineClicked" prefHeight="50.0" prefWidth="50.0" stylesheets="@sudoku.css" text="9" />
         <Button fx:id="clear" layoutX="528.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#buttonClearClicked" prefHeight="50.0" prefWidth="50.0" stylesheets="@sudoku.css" text="Clear" />
+        <Button fx:id="next" layoutX="587.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#buttonNextClicked" prefHeight="50.0" prefWidth="50.0" stylesheets="@sudoku.css" text="Next" />
+
         <Canvas fx:id="canvas" height="450.0" layoutX="14.0" layoutY="15.0" width="450.0" />
       <Line endX="350.0" layoutX="115.0" layoutY="166.0" startX="-100.0" stroke="#12e112" strokeWidth="3.0" />
       <Line endX="350.0" layoutX="115.0" layoutY="315.0" startX="-100.0" stroke="#12e112" strokeWidth="3.0" />
