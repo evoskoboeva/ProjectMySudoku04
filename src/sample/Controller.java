@@ -236,12 +236,12 @@ public class Controller<toString> {
 
 
     public void GenerationHard(ActionEvent actionEvent) {
-        levelGame = 50;
+        levelGame = 45;
         Generation(actionEvent);
 
     }
     public void GenerationEasy(ActionEvent actionEvent) {
-        levelGame = 1;
+        levelGame = 30;
         Generation(actionEvent);
     }
     public void Generation(ActionEvent actionEvent) {
@@ -439,6 +439,7 @@ public class Controller<toString> {
         loader.setController(this);
 
         Parent root = loader.load();
+
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/sample/sudoku.css");
         Stage primaryStage = new Stage();
@@ -540,6 +541,7 @@ public class Controller<toString> {
             line3.setEndX(-100);
             line1.setEndY(-71);
             line2.setEndY(-70);
+
 
             //initBoard(context);
             String[][] zero = gameBoard.getZero();
