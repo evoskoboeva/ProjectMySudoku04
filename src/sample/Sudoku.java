@@ -44,7 +44,7 @@ public class Sudoku {
     }
 
     public boolean checkIfSubsectionPossible(int row, int column) {
-        int[] firstElement = positionOfFirstElementInSubsection(row, column); // coordinates {row, column}
+        int[] firstElement = positionOfFirstElementInSubsection(row, column); // координаты {row, column}
         ArrayList<Integer> buff = new ArrayList<>();
         for (int i = firstElement[0]; i < firstElement[0] + 3; i++) {
             for (int j = firstElement[1]; j < firstElement[1] + 3; j++) {
@@ -60,10 +60,10 @@ public class Sudoku {
     }
 
     private int[] positionOfFirstElementInSubsection(int row, int column) {
-        return new int[]{squash(row), squash(column)};
+        return new int[]{searchFirst(row), searchFirst(column)};
     }
 
-    private int squash(int num) {
+    private int searchFirst(int num) {
         switch (num) {
             case 0:
             case 1:

@@ -298,7 +298,6 @@ public class Controller<toString> {
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix.length; col++) {
                 matrixSolution[row][col]=matrix[row][col];
-                matrixAuto[row][col]=matrix[row][col];
                 System.out.print(matrixSolution[row][col]);
             }
             System.out.println();
@@ -313,20 +312,21 @@ public class Controller<toString> {
                 tempCell = matrix[randomRow][randomCol];
             } else continue;
 
-            //Здесь проверка что решение у судоку одно - пока не доделано
+            //Здесь проверка что решение у судоку одно - пока не работает
             matrix[randomRow][randomCol] = 0;
+            matrixAuto[randomRow][randomCol]=0;
+
             Sudoku sudoku = new Sudoku(matrixAuto);
+            sudoku.solve();
 
-
-            //System.out.println(sudoku.solve());
             for (int row = 0; row < size; row++) {
                 for (int col = 0; col < size; col++) {
-
 
                     if (matrixSolution[row][randomCol] != matrixAuto[row][col]) {
                         break;
                     }
                 }
+
             }
 
 
@@ -334,12 +334,17 @@ public class Controller<toString> {
         }
         while (count < levelGame);
         Output(matrix);
+        System.out.println("auto");
+
         //Output(matrixAuto);  //test
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix.length; col++) {
+                System.out.print(matrixAuto[row][col]);
+
                 matrixInitial[row][col]=matrix[row][col];
 
             }
+            System.out.println();
 
         }
 
@@ -537,10 +542,10 @@ public class Controller<toString> {
     private void setFinished(GraphicsContext context) {
         if (gameBoard.checkForSuccess()) {
             context.clearRect(0, 0, 450, 450);
-            line4.setEndX(-100);
-            line3.setEndX(-100);
-            line1.setEndY(-71);
-            line2.setEndY(-70);
+            line4.setEndX(-101);
+            line3.setEndX(-101);
+            line1.setEndY(-72);
+            line2.setEndY(-72);
 
 
             //initBoard(context);
